@@ -1,6 +1,6 @@
 <template>
   <section id="contact" class="py-20 text-white text-center">
-    <h2 class="text-3xl font-bold mb-12">Contatos</h2>
+    <h2 class="text-3xl font-bold mb-12 dark:text-white text-neutral-400">Contatos</h2>
 
     <div class="flex flex-wrap justify-center gap-12">
       <div
