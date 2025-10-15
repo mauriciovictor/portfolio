@@ -6,25 +6,30 @@ import PessoalProjects from '../components/PessoalProjects.vue';
 import NavBar from '../components/NavBar.vue';
 import Stacks from '../components/Stacks.vue';
 import Contact from '../components/Contact.vue';
+import ExperienceTimeline from '../components/ExperienceTimeline.vue';
+import Education from '../components/Education.vue';
+
 import favicon from '../assets/favicon.jpeg?url';
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href={favicon} class="rounded-full" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Maurício Ferreira</title>
-    </head>
-    <body class="dark:bg-[#0f1115]  bg-gray-50 text-gray-200 font-sans min-h-screen">
-            <NavBar client:load/>
-        <main class="max-w-5xl mx-auto px-6 py-16">
-            <Hero client:load/>
-            <Stacks client:load/>
-            <EnterpriseProjects title="Projetos que já participei" client:load/>
-            <PessoalProjects title="Projetos pessoais" client:load/>
-            <Contact />
-        </main>
-    </body>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/png" href={favicon} class="rounded-full"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>Maurício Ferreira</title>
+</head>
+<body class="dark:bg-[#0f1115]  bg-gray-50 text-gray-200 font-sans min-h-screen">
+<NavBar client:load/>
+<main class="max-w-5xl mx-auto px-6 py-8">
+    <Hero client:load/>
+    <Education client:load/>
+    <ExperienceTimeline client:load/>
+    <Stacks client:load/>
+    <EnterpriseProjects title="Projetos que já participei" client:load/>
+    <PessoalProjects title="Projetos pessoais" client:load/>
+    <Contact/>
+</main>
+</body>
 </html>
