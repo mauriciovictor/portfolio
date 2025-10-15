@@ -2,7 +2,7 @@
   <nav class="max-w-5xl mx-auto flex items-center justify-between px-6 py-12">
     <div class="flex items-center gap-3">
       <img src="/images/profile.jpeg" alt="Profile" class="w-10 h-10 rounded-full"/>
-      <span class="font-semibold">Maurício Ferreira - teste</span>
+      <span class="font-semibold">Maurício Ferreira</span>
     </div>
 
     <!-- Menu Desktop -->
