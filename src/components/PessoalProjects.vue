@@ -30,42 +30,36 @@
         @click.self="closeModal"
     >
       <div
-          class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl max-w-2xl w-full p-8 relative animate-fade-in border border-gray-700">
+          class="bg-white  dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800 rounded-2xl shadow-2xl max-w-2xl w-full p-8 relative animate-fade-in border dark:border-gray-700">
         <button @click="closeModal"
                 class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl transition-colors">&times;
         </button>
-        <h3 class="text-3xl font-bold mb-4 text-white">{{ selectedPost.title }}</h3>
-        <p class="text-gray-300 mb-6 leading-relaxed">{{ selectedPost.description }}</p>
-
-        <h4 class="text-lg font-semibold text-white mb-3">Tecnologias Utilizadas:</h4>
-        <p class="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">{{ selectedPost.description }}</p>
-
+        <h3 class="text-3xl font-bold mb-4  text-neutral-400 dark:text-white ">{{ selectedPost.title }}</h3>
+        <p class="text-neutral-400 dark:text-gray-300 mb-6 leading-relaxed">{{ selectedPost.description }}</p>
         <div class="mb-6">
-          <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Tecnologias Utilizadas:</h4>
-          class="px-4 py-2 bg-blue-600/40 text-blue-200 text-sm font-semibold rounded-lg border border-blue-500/60
-          hover:bg-blue-600/60 transition-colors"
-          <span
-              v-for="tech in selectedPost.tecnologias"
-              :key="tech"
-              class="px-4 py-2 text-sm font-semibold rounded-lg border dark:bg-purple-600/30 dark:text-purple-300 dark:border-purple-500/50 transition-colors"
-          >
+          <div class="flex flex-wrap gap-2">
+            <span
+                v-for="tech in selectedPost.tecnologias"
+                :key="tech"
+                class="px-4 py-2 text-sm font-semibold rounded-lg border dark:bg-blue-600/30 text-blue-300 border-blue-500/50 transition-colors"
+            >
               {{ tech }}
             </span>
+          </div>
         </div>
+        <a
+            v-if="selectedPost.link"
+            :href="selectedPost.link"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-lg"
+        >
+          Visitar projeto
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
       </div>
-
-      <a
-          v-if="selectedPost.link"
-          :href="selectedPost.link"
-          target="_blank"
-          rel="noopener"
-          class="inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-lg"
-      >
-        Visitar projeto
-        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-        </svg>
-      </a>
     </div>
   </section>
 </template>

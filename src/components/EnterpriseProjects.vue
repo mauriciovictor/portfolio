@@ -26,16 +26,16 @@
     <!-- Modal -->
     <div
         v-if="showModal"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+        class="fixed inset-0 z-50 flex items-center justify-center  dark:bg-black/70 backdrop-blur-sm"
         @click.self="closeModal"
     >
       <div
-          class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl max-w-2xl w-full p-8 relative animate-fade-in border border-gray-700">
+          class="bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800 rounded-2xl shadow-2xl max-w-2xl w-full p-8 relative animate-fade-in border border-gray-200 dark:border-gray-700">
         <button @click="closeModal"
                 class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl transition-colors">&times;
         </button>
-        <h3 class="text-3xl font-bold mb-4 text-white">{{ selectedPost.title }}</h3>
-        <p class="text-gray-300 mb-6 leading-relaxed">{{ selectedPost.description }}</p>
+        <h3 class="text-3xl font-bold mb-4 text-neutral-400 dark:text-white ">{{ selectedPost.title }}</h3>
+        <p class="text-neutral-400 dark:text-gray-300 mb-6 leading-relaxed  ">{{ selectedPost.description }}</p>
 
         <div class="mb-6">
           <h4 class="text-lg font-semibold text-white mb-3">Tecnologias Utilizadas:</h4>
@@ -43,7 +43,7 @@
             <span
                 v-for="tech in selectedPost.tecnologias"
                 :key="tech"
-                class="px-4 py-2 bg-purple-600/40 text-purple-200 text-sm font-semibold rounded-lg border dark:border-purple-500/60 dark:hover:bg-purple-600/60 transition-colors"
+                class="px-4 py-2 text-sm font-semibold rounded-lg border dark:bg-purple-600/30 text-purple-300 border-purple-500/50 transition-colors"
             >
               {{ tech }}
             </span>
