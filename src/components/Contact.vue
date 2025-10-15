@@ -1,25 +1,31 @@
 <template>
   <section id="contact" class="py-20 text-white text-center">
-    <h2 class="text-3xl font-bold mb-12 dark:text-white text-neutral-400">Contatos</h2>
+    <h2 class="text-3xl font-bold mb-12 dark:text-white text-neutral-400">
+      Contatos
+    </h2>
 
     <div class="flex flex-wrap justify-center gap-12">
       <div
-          v-for="item in contacts"
-          :key="item.label"
-          class="flex flex-col items-center text-center group"
+        v-for="item in contacts"
+        :key="item.label"
+        class="flex flex-col items-center text-center group"
       >
         <div
-            class="bg-neutral-100 dark:bg-[#1a1a1a] rounded-full w-16 h-16 flex items-center justify-center mb-4
-                 transition-all duration-300 group-hover:bg-red-700"
+          class="bg-neutral-100 dark:bg-[#1a1a1a] rounded-full w-16 h-16 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-red-700"
         >
-          <component :is="item.icon" class="w-6 h-6 text-red-400 group-hover:text-white"/>
+          <component
+            :is="item.icon"
+            class="w-6 h-6 text-red-400 group-hover:text-white"
+          />
         </div>
-        <h3 class="font-semibold text-lg text-gray-600 dark:text-white">{{ item.label }}</h3>
+        <h3 class="font-semibold text-lg text-gray-600 dark:text-white">
+          {{ item.label }}
+        </h3>
         <a
-            :href="item.href"
-            target="_blank"
-            rel="noopener"
-            class="text-gray-400 text-sm hover:text-red-400 transition"
+          :href="item.href"
+          target="_blank"
+          rel="noopener"
+          class="text-gray-400 text-sm hover:text-red-400 transition"
         >
           {{ item.value }}
         </a>
@@ -29,34 +35,10 @@
 </template>
 
 <script setup>
-import {Mail, Phone, Linkedin, Github} from "lucide-vue-next";
+import { Mail, Phone, Linkedin, Github } from "lucide-vue-next";
+import { useData } from "../composables/useData";
 
-const contacts = [
-  {
-    label: "E-mail",
-    icon: Mail,
-    value: "mauriciovictor17@gmail.com",
-    href: "mailto:mauriciovictor17@gmail.com",
-  },
-  {
-    label: "Telefone",
-    icon: Phone,
-    value: "(96) 99907-1159",
-    href: "tel:+5596999071159",
-  },
-  {
-    label: "Linkedin",
-    icon: Linkedin,
-    value: "mauricio-v-ferreira-",
-    href: "https://www.linkedin.com/in/mauricio-v-ferreira-/",
-  },
-  {
-    label: "Github",
-    icon: Github,
-    value: "@mauriciovictor",
-    href: "https://github.com/mauriciovictor",
-  },
-];
+const { contacts } = useData().data();
 </script>
 
 <style scoped>
