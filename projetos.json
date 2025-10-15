@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "titulo": "Portfólio Pessoal",
+    "descricao": "Site moderno feito com Astro, Vue.js e Tailwind CSS. Design minimalista e responsivo.",
+    "tags": ["Vue.js", "Astro", "Tailwind"],
+    "link": "https://github.com/seuusuario/portfolio"
+  },
+  {
+    "id": 2,
+    "titulo": "Dashboard Financeiro",
+    "descricao": "Dashboard para controle financeiro, com gráficos dinâmicos e integração de API.",
+    "tags": ["Vue.js", "Tailwind"],
+    "link": "https://github.com/seuusuario/dashboard-financeiro"
+  },
+  {
+    "id": 3,
+    "titulo": "Landing Page Produto",
+    "descricao": "Landing page otimizada para conversão, com animações e layout moderno.",
+    "tags": ["Astro", "Tailwind"],
+    "link": "https://github.com/seuusuario/landing-produto"
+  },
+  {
+    "id": 4,
+    "titulo": "Blog Tech",
+    "descricao": "Blog sobre tecnologia, com integração de API e layout responsivo.",
+    "tags": ["Vue.js", "Astro"],
+    "link": "https://github.com/seuusuario/blog-tech"
+  },
+  {
+    "id": 5,
+    "titulo": "Clone Netflix",
+    "descricao": "Clone da interface da Netflix, com autenticação e catálogo dinâmico.",
+    "tags": ["Vue.js", "Tailwind"],
+    "link": "https://github.com/seuusuario/netflix-clone"
+  }
+]

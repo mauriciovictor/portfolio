@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode */
+body:not(.dark) {
+  /*@apply bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900;*/
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Offset para ancoragem suave */
+}
+
+/* Adiciona scroll offset para todas as seções */
+section {
+  scroll-margin-top: 100px;
+}
+
+a {
+  transition: color 0.2s;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #23272f;
+}
+::-webkit-scrollbar-thumb {
+  background: #18181b;
+  border-radius: 8px;
+}
