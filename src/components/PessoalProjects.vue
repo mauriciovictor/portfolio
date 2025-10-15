@@ -1,22 +1,22 @@
 <template>
   <section id="projetos-pessoais" class="mt-20">
-    <h2 class="text-2xl font-semibold mb-8">{{ props.title }}</h2>
+    <h2 class="text-2xl dark:text-white text-neutral-400 font-semibold mb-8">{{ props.title }}</h2>
     <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-10">
       <article
           v-for="post in posts"
           :key="post.title"
-          class="group rounded-2xl overflow-hidden relative cursor-pointer shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 p-6 floating"
+          class="group rounded-2xl overflow-hidden relative cursor-pointer shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border dark:border-none border-gray-200 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 p-6 floatingazs"
           @click="openModal(post)"
       >
         <div class="mb-4">
-          <h3 class="text-white font-bold text-2xl mb-3">{{ post.title }}</h3>
-          <p class="text-gray-300 text-sm mb-4 line-clamp-3">{{ post.description }}</p>
+          <h3 class="text-neutral-500 dark:text-white font-bold text-2xl mb-3">{{ post.title }}</h3>
+          <p class="text-neutral-400 dark:text-gray-300 text-sm mb-4 line-clamp-3">{{ post.description }}</p>
         </div>
         <div class="flex flex-wrap gap-2">
           <span
               v-for="tech in post.tecnologias"
               :key="tech"
-              class="px-3 py-1 bg-blue-600/30 text-blue-300 text-xs font-semibold rounded-full border border-blue-500/50"
+              class="px-3 py-1 bg-blue-600/30 text-cyan-900 text-blue-300 dark:bg-blue-600/30 dark:text-blue-300 dark:border-blue-500/50 text-xs font-semibold rounded-full border border-blue-500/50"
           >
             {{ tech }}
           </span>
@@ -47,7 +47,7 @@
           <span
               v-for="tech in selectedPost.tecnologias"
               :key="tech"
-              class="px-4 py-2 bg-blue-100 dark:bg-blue-600/40 text-blue-700 dark:text-blue-200 text-sm font-semibold rounded-lg border border-blue-300 dark:border-blue-500/60 hover:bg-blue-200 dark:hover:bg-blue-600/60 transition-colors"
+              class="px-4 py-2 text-sm font-semibold rounded-lg border dark:bg-purple-600/30 dark:text-purple-300 dark:border-purple-500/50 transition-colors"
           >
               {{ tech }}
             </span>

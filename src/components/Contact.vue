@@ -9,12 +9,12 @@
           class="flex flex-col items-center text-center group"
       >
         <div
-            class="bg-[#1a1a1a] rounded-full w-16 h-16 flex items-center justify-center mb-4
+            class="bg-neutral-100 dark:bg-[#1a1a1a] rounded-full w-16 h-16 flex items-center justify-center mb-4
                  transition-all duration-300 group-hover:bg-red-700"
         >
           <component :is="item.icon" class="w-6 h-6 text-red-400 group-hover:text-white"/>
         </div>
-        <h3 class="font-semibold text-lg">{{ item.label }}</h3>
+        <h3 class="font-semibold text-lg text-gray-600 dark:text-white">{{ item.label }}</h3>
         <a
             :href="item.href"
             target="_blank"

@@ -3,7 +3,7 @@
     <p class="text-red-400 uppercase tracking-wide text-sm font-semibold mb-3">
       Olá, me chamo Maurício
     </p>
-    <h1 class="text-6xl font-bold text-white mb-6 leading-tight">
+    <h1 class="dark:text-white text-neutral-600 text-6xl font-bold text-white mb-6 leading-tight">
       +5 anos de experiência.
     </h1>
     <p class="text-gray-400 text-lg leading-relaxed ">

@@ -2,7 +2,7 @@
   <nav class="max-w-5xl mx-auto flex items-center justify-between px-6 py-12">
     <div class="flex items-center gap-3">
       <img src="/images/profile.jpeg" alt="Profile" class="w-10 h-10 rounded-full"/>
-      <span class="font-semibold">Maurício Ferreira</span>
+      <span class="font-semibold text-neutral-400 dark:text-gray-300">Maurício Ferreira</span>
     </div>
 
     <!-- Menu Desktop -->
@@ -10,7 +10,7 @@
       <li>
         <a
             href="#sobre"
-            :class="activeSection === 'sobre' ? 'text-red-400 font-bold' : 'hover:text-red-400'"
+            :class="activeSection === 'sobre' ? 'text-red-400 font-bold' : 'dark:text-white text-neutral-400 hover:text-red-400'"
             class="transition"
         >
           Sobre mim
@@ -19,7 +19,7 @@
       <li>
         <a
             href="#stack"
-            :class="activeSection === 'stack' ? 'text-red-400 font-bold' : 'hover:text-red-400'"
+            :class="activeSection === 'stack' ? 'text-red-400 font-bold' : 'dark:text-white text-neutral-400 hover:text-red-400'"
             class="transition"
         >
           Stack
@@ -28,7 +28,7 @@
       <li>
         <a
             href="#projetos-empresariais"
-            :class="activeSection === 'projetos-empresariais' ? 'text-red-400 font-bold' : 'hover:text-red-400'"
+            :class="activeSection === 'projetos-empresariais' ? 'text-red-400 font-bold' : 'dark:text-white text-neutral-400 hover:text-red-400'"
             class="transition"
         >
           Projetos Empresariais
@@ -37,7 +37,7 @@
       <li>
         <a
             href="#projetos-pessoais"
-            :class="activeSection === 'projetos-pessoais' ? 'text-red-400 font-bold' : 'hover:text-red-400'"
+            :class="activeSection === 'projetos-pessoais' ? 'text-red-400 font-bold' : 'dark:text-white text-neutral-400 hover:text-red-400'"
             class="transition"
         >
           Projetos Pessoais
@@ -46,7 +46,7 @@
       <li>
         <a
             href="#contact"
-            :class="activeSection === 'contact' ? 'text-red-400 font-bold' : 'hover:text-red-400'"
+            :class="activeSection === 'contact' ? 'text-red-400 font-bold' : 'dark:text-white text-neutral-400 hover:text-red-400'"
             class="transition"
         >
           Contato
@@ -54,7 +54,7 @@
       </li>
       <li>
         <button @click="toggleTheme" class="p-2 rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition">
-          <svg v-if="isDark" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <svg v-if="!isDark" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path
                 d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/>
           </svg>
@@ -68,7 +68,7 @@
     <!-- Menu Mobile -->
     <div class="md:hidden flex items-center gap-3">
       <button @click="toggleTheme" class="p-2 rounded-lg hover:bg-gray-700 dark:hover:bg-gray-300 transition">
-        <svg v-if="isDark" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <svg v-if="!isDark" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
           <path
               d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/>
         </svg>
@@ -94,7 +94,7 @@
         <a
             href="#sobre"
             @click="closeMenu"
-            :class="activeSection === 'sobre' ? 'text-red-400 font-bold' : 'hover:text-red-400'"
+            :class="activeSection === 'sobre' ? 'text-red-400 font-bold' : 'dark:text-white text-neutral-400 hover:text-red-400'"
             class="block transition"
         >
           Sobre mim
@@ -104,7 +104,7 @@
         <a
             href="#stack"
             @click="closeMenu"
-            :class="activeSection === 'stack' ? 'text-red-400 font-bold' : 'hover:text-red-400'"
+            :class="activeSection === 'stack' ? 'text-red-400 font-bold' : 'dark:text-white text-neutral-400 hover:text-red-400'"
             class="block transition"
         >
           Stack
@@ -114,7 +114,7 @@
         <a
             href="#projetos-empresariais"
             @click="closeMenu"
-            :class="activeSection === 'projetos-empresariais' ? 'text-red-400 font-bold' : 'hover:text-red-400'"
+            :class="activeSection === 'projetos-empresariais' ? 'text-red-400 font-bold' : 'dark:text-white text-neutral-400 hover:text-red-400'"
             class="block transition"
         >
           Projetos Empresariais
@@ -124,7 +124,7 @@
         <a
             href="#projetos-pessoais"
             @click="closeMenu"
-            :class="activeSection === 'projetos-pessoais' ? 'text-red-400 font-bold' : 'hover:text-red-400'"
+            :class="activeSection === 'projetos-pessoais' ? 'text-red-400 font-bold' : 'dark:text-white text-neutral-400 hover:text-red-400'"
             class="block transition"
         >
           Projetos Pessoais
@@ -134,7 +134,7 @@
         <a
             href="#contact"
             @click="closeMenu"
-            :class="activeSection === 'contact' ? 'text-red-400 font-bold' : 'hover:text-red-400'"
+            :class="activeSection === 'contact' ? 'text-red-400 font-bold' : 'dark:text-white text-neutral-400 hover:text-red-400'"
             class="block transition"
         >
           Contato
@@ -146,66 +146,28 @@
 
 <script setup>
 import {ref, onMounted, onUnmounted} from 'vue';
+import {useTheme} from '../composables/useTheme.js'
+import {useMenu} from "../composables/useMenu.js";
+import useHandleScroll from "../composables/useHandleScroll.js";
 
-const menuOpen = ref(false);
-const isDark = ref(true);
+const {isDark, toggleTheme, loadTheme} = useTheme();
+const {toggleMenu, closeMenu, menuOpen} = useMenu()
+const handleScroll = useHandleScroll();
 const activeSection = ref('sobre');
 
 onMounted(() => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    isDark.value = false;
-    document.documentElement.classList.remove('dark');
-  } else {
-    isDark.value = true;
-    document.documentElement.classList.add('dark');
-  }
+  loadTheme();
 
   // Adiciona listener de scroll para detectar seção ativa
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Chama uma vez para definir a seção inicial
+  window.addEventListener('scroll', handleScroll.setup(window, document));
+  handleScroll.setup(window, document); // Chama uma vez para definir a seção inicial
 });
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
 
-function handleScroll() {
-  const sections = ['sobre', 'stack', 'projetos-empresariais', 'projetos-pessoais', 'contact'];
-  const scrollPosition = window.scrollY + 150; // Offset para melhor detecção
 
-  for (const sectionId of sections) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        activeSection.value = sectionId;
-        break;
-      }
-    }
-  }
-}
-
-function toggleTheme() {
-  isDark.value = !isDark.value;
-  if (isDark.value) {
-    document.documentElement.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
-  }
-}
-
-function toggleMenu() {
-  menuOpen.value = !menuOpen.value;
-}
-
-function closeMenu() {
-  menuOpen.value = false;
-}
 </script>
 
 <style scoped>
