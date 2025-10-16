@@ -5,40 +5,40 @@
     </h2>
 
     <div class="flex flex-wrap justify-center gap-12">
-      <div
-        v-for="item in contacts"
-        :key="item.label"
-        class="flex flex-col items-center text-center group"
+      <a
+          :href="item.href"
+          target="_blank"
+          rel="noopener"
+          v-for="item in contacts"
+          :key="item.label"
+          class="flex group flex-col items-center text-center group"
       >
         <div
-          class="bg-neutral-100 dark:bg-[#1a1a1a] rounded-full w-16 h-16 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-red-700"
+            class="bg-neutral-100 dark:bg-[#1a1a1a] rounded-full w-16 h-16 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-red-700"
         >
           <component
-            :is="item.icon"
-            class="w-6 h-6 text-red-400 group-hover:text-white"
+              :is="item.icon"
+              class="w-6 h-6 text-red-400 group-hover:text-white"
           />
         </div>
         <h3 class="font-semibold text-lg text-gray-600 dark:text-white">
           {{ item.label }}
         </h3>
-        <a
-          :href="item.href"
-          target="_blank"
-          rel="noopener"
-          class="text-gray-400 text-sm hover:text-red-400 transition"
+        <span
+
+            class="text-gray-400 text-sm group-hover:text-red-400 transition"
         >
           {{ item.value }}
-        </a>
-      </div>
+        </span>
+      </a>
     </div>
   </section>
 </template>
 
 <script setup>
-import { Mail, Phone, Linkedin, Github } from "lucide-vue-next";
-import { useData } from "../composables/useData";
+import {useData} from "../composables/useData";
 
-const { contacts } = useData().data();
+const {contacts} = useData().data();
 </script>
 
 <style scoped>
