@@ -193,7 +193,7 @@ export function useData() {
                         "PNPM",
                         "DOCKER"
                     ],
-                    link: "https://github.com/mauriciovictor/master-alias",
+                    link: "https://github.com/mauriciovictor/laravel-inertia-gestao-projetos",
                 },
             ],
             contacts: [
