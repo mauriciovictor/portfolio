@@ -7,11 +7,16 @@ on:
       - master
       - 'feature/**'
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pages: write
       id-token: write
     steps:
@@ -41,4 +46,3 @@ jobs:
           publish_dir: ./dist
           publish_branch: gh-pages
           force_orphan: true
-
