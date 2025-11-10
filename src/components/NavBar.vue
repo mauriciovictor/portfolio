@@ -1,7 +1,7 @@
 <template>
   <nav class="max-w-5xl mx-auto flex items-center justify-between px-6 py-12">
     <div class="flex items-center gap-3">
-      <img src="/images/profile.jpeg" alt="Profile" class="w-10 h-10 rounded-full"/>
+      <img :src="profile" alt="Profile" class="w-10 h-10 rounded-full"/>
       <span class="font-semibold text-neutral-400 dark:text-gray-300">Maurício Ferreira</span>
     </div>
 
@@ -149,6 +149,9 @@ import {ref, onMounted, onUnmounted} from 'vue';
 import {useTheme} from '../composables/useTheme.js'
 import {useMenu} from "../composables/useMenu.js";
 import useHandleScroll from "../composables/useHandleScroll.js";
+
+const base = import.meta.env.BASE_URL || '/';
+const profile = base + 'images/profile.jpeg';
 
 const {isDark, toggleTheme, loadTheme} = useTheme();
 const {toggleMenu, closeMenu, menuOpen} = useMenu()
