@@ -1,0 +1,1 @@
+import{r as a}from"./runtime-core.esm-bundler.sv1sbfWt.js";function u(){const o=a(!1),e=a({});function l(t){e.value=t,o.value=!0}function s(){o.value=!1}return{showModal:o,selectedPost:e,openModal:l,closeModal:s}}export{u};
