@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "predeploy": "astro build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/netlify": "^6.5.13",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.0",
     "tailwindcss": "^3.4.0"
   }
