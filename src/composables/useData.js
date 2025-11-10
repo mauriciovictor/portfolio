@@ -169,6 +169,32 @@ export function useData() {
                     ],
                     link: "https://github.com/mauriciovictor/portfolio",
                 },
+                {
+                    title: "Master Alias - CLI",
+                    description:
+                        "Gerencie seus aliases de shell como um profissional — salve-os no Github gist, gere um arquivo de shell e execute-o a partir do seu RC de shell. Simples, rápido e seguro.",
+                    tecnologias: [
+                        "Golang",
+                        "Github Gist",
+                        "Shell Script",
+                    ],
+                    link: "https://github.com/mauriciovictor/master-alias",
+                },
+                {
+                    title: "Gestão de projetos",
+                    description:
+                        "Aplicação administrativa construída em Laravel + Inertia + Vue 3 (PrimeVue) com TailwindCSS. O objetivo é gerenciar usuários, perfis/roles e permissões com uma UI reativa (Inertia) e componentes do PrimeVue.",
+                    tecnologias: [
+                        "PHP",
+                        "Laravel 12",
+                        "Inertia",
+                        "Vue 3",
+                        "TailwindCSS",
+                        "PNPM",
+                        "DOCKER"
+                    ],
+                    link: "https://github.com/mauriciovictor/master-alias",
+                },
             ],
             contacts: [
                 {
